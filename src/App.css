@@ -103,6 +103,8 @@ body {
 	border: 3px solid black;
 	border-radius: 5px;
 	padding: 5px 0;
+	background-color: rgba(157, 252, 219, 0.1);
+	color: #9dfcdb;
 }
 
 .menu-gallery-text {
@@ -409,7 +411,7 @@ input:invalid {  background-color: #ffdddd; }
 }
 
 /*color for the variables displayed to the right of the checkboxes*/
-.displayVar { color:#adccff; }
+.displayVar { color:#b8e0ff; }
 
 
 /* ============== Custom radio buttons in input menu ================ */
@@ -579,7 +581,7 @@ input:invalid {  background-color: #ffdddd; }
 .border_bottom2 td { border-bottom:1px solid #000; color:#2F329F; font-weight:bold;}
 .conditionalBreak { line-height:15px; }
 .conditionalBreak1 { /*line-height:15px;*/ line-height:7px; }
-.bm-menu-left a, .bm-menu-right a { color:#4287f5; }
+.bm-menu-left a, .bm-menu-right a { color:#6ee7c7; }
 
 
 /* =========The Popup message, "About this page"===========*/

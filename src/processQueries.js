@@ -51,7 +51,9 @@ var defaultMetric = {
 
 export function processQueryVariables()
 {
-	const params = new URLSearchParams(document.location.search);
+	const rawParams = new URLSearchParams(document.location.search);
+	const params = new URLSearchParams();
+	for (const [key, value] of rawParams) { params.append(key.toLowerCase(), value); }
 
 	// Helper: get a numeric param; returns NaN if absent or non-numeric.
 	function getNum(key) { const v = params.get(key); return v === null ? NaN : Number(v); }
@@ -91,6 +93,8 @@ export function processQueryVariables()
 
 	//set starting height
 	var startheight = getNum("startheight");
+	if (isNaN(startheight))
+		{ startheight = getNum("height"); }
 	if (isNaN(startheight))
 		{ startheight = defaults.startheight; }
 	else { queryflag = true; }

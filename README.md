@@ -15,12 +15,12 @@ The code in the src folder is divided into these segments that run the page:
 * The left input menu is handled in LeftMenu.js. The input fields with the logarithmic sliders are handled in InputField.js. The bottom "stats" menu is handled in OutputMenu.js.
 
 ### Query variables
-The website supports loading with a list of query options:
+Query variable names are case-insensitive. The website supports loading with a list of query options:
 	?units=feet  (also: imperial, ft, metric, meters, m)
 	?diameter=
 	?radius=
 	?percenttime=  (also: playback=)
-	?startheight=
+	?startheight=  (also: height=)
 	?percentgravity=
 	?speed=
 	?angle=

@@ -144,7 +144,7 @@ render() {
 
 	  <div id="CenteredLeftMenu">
 		
-		<h3 style={{color:"#B0B0B0"}}>Edit the Throw</h3>
+		<h3 style={{color:"#d0d0d0"}}>Edit the Throw</h3>
 
 	<GalleryStrip
 		menu={true}
@@ -154,7 +154,7 @@ render() {
 		showRight={this.props.showRightCursor}
 		text={this.props.galleryText}
 	/>
-	<div style={{fontSize:"0.7em", color:'#9dfcdb'}}>* Click through the gallery to learn more!</div>
+	<div style={{fontSize:"0.75em", color:'#f0c97a'}}>* Click through the gallery to learn more!</div>
 	<br/>
 
 
@@ -221,10 +221,10 @@ render() {
 
 <br/>
 <br/>
-  <div style={{lineHeight:'1.25em'}}>
+  <div style={{lineHeight:'1.7em'}}>
 	Read <a href={window.articleUrl+'/intro'}>the associated article</a><br/>
 	<a href={window.articleUrl+'/math'}>The math</a> behind this model<br/>
-	<a href={'https://www.github.com/kevindprice/coriolis'}>The code</a> behind this model<br/>
+	Kevin Price's <a href="https://kevin-price.github.io">coding portfolio</a>
   </div>
 
 
