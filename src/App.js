@@ -17,47 +17,16 @@ import PopUp from "./PopUp"
 import Gallery from "./gallery.json"
 import GalleryStrip from "./GalleryStrip"
 
+//Default variables
+import { defaultImperial, defaultMetric } from "./defaults.js"
+
 //If ResizeObserver isn't supported to my liking...
 //then there is react-resize-observer import which could do the same thing,
-//perhaps even more simply. 
-//But I liked the idea of using a browser function 
+//perhaps even more simply.
+//But I liked the idea of using a browser function
 //instead of installing a new component.
 //Code I used to implement ResizeObserver:
 //https://seesparkbox.com/foundry/using_react_custom_hook
-
-
-		//article url is global so I can define it here for every part of the app.
-//window.articleUrl = "http://localhost:4000"
-window.articleUrl = "https://coriolis-station-article.netlify.app"
-
-//Defaults set as namespaces. 
-//Can push reset in input menu to return to these default values.
-//If a query variable was used, then it will return to that instead.
-//Note: these are also present in processQueries.js.
-	//If you edit them here, then make sure you edit them there too!
-var defaultImperial = {
-	diameter:100,
-	startheight:4,
-	units:"ft",
-	percentgravity:100,
-	thrownUp:3,
-	accel_earth:32.174,
-	anglefromVertical:0,
-	speed: 14, //13.894,
-	percenttime:100,
-}
-
-var defaultMetric = {
-	diameter: 30, //15.24,
-	startheight: 1.2,  //1.219,
-	units:"m",
-	percentgravity:100,
-	thrownUp: 1, //.92,
-	accel_earth: 9.80665,
-	anglefromVertical:0,
-	speed: 4, //4.235,
-	percenttime: 100,	
-}
 
 var defaultQuery = {  //constructor sets the values
 	diameter: null,		//if there is a query variable present.

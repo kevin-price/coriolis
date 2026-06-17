@@ -1,6 +1,8 @@
 //This file processes the query variables in the address bar
 //so you can customize the link to the model with the variables you want.
 
+import { defaultImperial, defaultMetric } from "./defaults.js"
+
 /*List of supported queries:
 	?units=feet  (also: imperial, ft, metric, meters, m)
 	?diameter=
@@ -17,37 +19,6 @@
 	?noPopUp
 	?view=earth-inertial  (also: station-inertial; case-insensitive)
 */
-
-
-
-
-//Defaults set as namespaces. Can reset to these default values in the input menu.
-//Note: these are also present in App.js.
-	//If you edit them here, then make sure you edit them there too!
-var defaultImperial = {
-	diameter:100,
-	startheight:4,
-	units:"ft",
-	percentgravity:100,
-	thrownUp:3,
-	accel_earth:32.174,
-	anglefromVertical:0,
-	speed: 14, //13.894,
-	percenttime:100,
-}
-
-var defaultMetric = {
-	diameter: 30, //15.24,
-	startheight: 1.2,  //1.219,
-	units:"m",
-	percentgravity:100,
-	thrownUp: 1, //.92,
-	accel_earth: 9.80665,
-	anglefromVertical:0,
-	speed: 4, //4.235,
-	percenttime: 100,
-}
-
 
 export function processQueryVariables()
 {

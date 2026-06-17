@@ -222,8 +222,8 @@ render() {
 <br/>
 <br/>
   <div style={{lineHeight:'1.7em'}}>
-	Read <a href={window.articleUrl+'/intro'}>the associated article</a><br/>
-	<a href={window.articleUrl+'/math'}>The math</a> behind this model<br/>
+	Read <a href='https://coriolis-article.netlify.app/intro'>the associated article</a><br/>
+	<a href='https://coriolis-article.netlify.app/math'>The math</a> behind this model<br/>
 	Kevin Price's <a href="https://kevin-price.github.io">coding portfolio</a>
   </div>
 
@@ -264,7 +264,3 @@ function round(num, places) {
 }
 
 export default LeftMenu;
-
-
-//	<a href={window.articleUrl+'/ideas'}>Interesting throws</a> for this model<br/>
-//<h4 style={{marginBlockEnd:'0.7em'}}>Links</h4>
