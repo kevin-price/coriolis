@@ -21,7 +21,7 @@ Query variable names are case-insensitive. The website supports loading with a l
 	?radius=
 	?percenttime=  (also: playback=)
 	?startheight=  (also: height=)
-	?percentgravity=
+	?percentgravity=  (also: gravity=) - accepts number either as a percent (95) or a decimal (.95)
 	?speed=
 	?angle=
 	?thrownUp=  (also: throwHeight=) — calculates speed needed to throw this high on Earth
@@ -31,6 +31,9 @@ Query variable names are case-insensitive. The website supports loading with a l
 	?noPopUp
 	?view=earth-inertial  (also: station-inertial; case-insensitive)
 
+Sample query:
+https://coriolis-station.netlify.app/?diameter=45&speed=0&units=m&gravity=.05
+(represents dropping an object in the gravity of the Gemini 11 mission)
 
 ### Tools from React Vite
 

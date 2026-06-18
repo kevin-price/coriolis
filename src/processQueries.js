@@ -9,7 +9,7 @@ import { defaultImperial, defaultMetric } from "./defaults.js"
 	?radius=
 	?percenttime=  (also: playback=)
 	?startheight=
-	?percentgravity=
+	?percentgravity=   (also: gravity=) - accepts number either as a percent (95) or a decimal (.95)
 	?speed=
 	?angle=
 	?thrownUp=  (also: throwHeight=) — calculates speed needed to throw this high on Earth
@@ -70,11 +70,16 @@ export function processQueryVariables()
 		{ startheight = defaults.startheight; }
 	else { queryflag = true; }
 
-	//set percent gravity
-	var gravity = getNum("percentgravity");
-	if (isNaN(gravity))
-		{ gravity = defaults.percentgravity; }
-	else { queryflag = true; }
+	//set percent gravity. If in the format .05, recognize this is 5%.
+	var percentgravity = getNum("percentgravity");
+	if (isNaN(percentgravity))
+		{ percentgravity = getNum("gravity"); }
+	if (isNaN(percentgravity))
+		{ percentgravity = defaults.percentgravity; }
+	else { queryflag = true; 
+		if(percentgravity < 1)
+			{ percentgravity *= 100; }
+	}
 
 	//set the speed
 	var speed = getNum("speed");
@@ -135,7 +140,7 @@ export function processQueryVariables()
 		diameter:         diameter,
 		startheight:      startheight,
 		units:            units,
-		percentgravity:   gravity,
+		percentgravity:   percentgravity,
 		thrownUp:         thrownUp,
 		accel_earth:      accel_earth,
 		anglefromVertical: angle,
